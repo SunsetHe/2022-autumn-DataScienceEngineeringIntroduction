@@ -1,14 +1,8 @@
-import time
+f1 = open(r'D:\desktop\test.txt','r')
+s = f1.readline()
+print(s)
 
-scale = 50
-print("start".center(scale//2,'-'))
-start = time.perf_counter()
+f1.seek(0)
 
-for i in range(scale+1):
-    a = '*' * 1
-    b = '.' * (scale-i)
-    c = (i/scale)*100
-    dur = time.perf_counter() - start
-    print("\r{:^3.0f}%[{}->{}]{:.2f}s".format(c,a,b,dur),end='')
-    time.sleep(0.1)
-print('\n'+"end".center(scale//2,'-'))
+s2 = f1.readlines()
+print(s2)
