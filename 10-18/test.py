@@ -32,3 +32,14 @@ for key,value in song.items():
     s = value + " 's " + key + '\n'
     f3.write(s)
 f3.close()"""
+
+import csv
+
+f1 = open("stuGrade.csv","r")
+thefile = csv.reader(f1)
+Thefile = list(thefile)
+print(Thefile)
+print(Thefile[0][0])
+for i in Thefile:
+    print(i)
+print(list.__len__(Thefile))
